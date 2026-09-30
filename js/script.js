@@ -83,7 +83,27 @@ document.querySelectorAll('[data-whats]').forEach((el) => {
     el.href = whatsUrl(el.dataset.whats);
 });
 
+// ===== Cabeçalho com sombra ao rolar =====
+const header = document.querySelector('.header');
+const atualizarHeader = () => header.classList.toggle('scrolled', window.scrollY > 10);
+window.addEventListener('scroll', atualizarHeader, { passive: true });
+atualizarHeader();
+
 // ===== Abas casa / empresa =====
+const tabsEl = document.querySelector('.tabs');
+
+// indicador que desliza até a aba ativa
+function moverIndicador() {
+    const ativa = tabsEl.querySelector('.tab.active');
+    tabsEl.style.setProperty('--x', `${ativa.offsetLeft}px`);
+    tabsEl.style.setProperty('--w', `${ativa.offsetWidth}px`);
+    tabsEl.classList.add('ready');
+}
+
+window.addEventListener('resize', moverIndicador);
+document.fonts.ready.then(moverIndicador);
+moverIndicador();
+
 document.querySelectorAll('.tab').forEach((tab) => {
     tab.addEventListener('click', () => {
         document.querySelectorAll('.tab').forEach((t) => {
@@ -93,6 +113,16 @@ document.querySelectorAll('.tab').forEach((tab) => {
         document.querySelectorAll('.tab-panel').forEach((panel) => {
             panel.classList.toggle('active', panel.id === `tab-${tab.dataset.tab}`);
         });
+        moverIndicador();
+    });
+});
+
+// ===== Luz que segue o mouse nos cards =====
+document.querySelectorAll('.card').forEach((card) => {
+    card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+        card.style.setProperty('--my', `${e.clientY - r.top}px`);
     });
 });
 
@@ -193,8 +223,13 @@ function animarContador(el) {
 }
 
 // ===== Animações ao rolar =====
-document.querySelectorAll('.card, .app, .quick, .speed-text, .speed-counter, .business').forEach((el) => {
+const alvosReveal = '.tabs, .card, .app, .quick, .typing-title, .section-sub, .speed-text, .speed-counter, .business, .coverage-inner > *, .section-head, .cities-stats, .cities-toolbar, .footer-col';
+
+document.querySelectorAll(alvosReveal).forEach((el) => {
     el.classList.add('reveal');
+    // escalona irmãos que entram juntos (cards, apps, colunas)
+    const irmaos = [...el.parentElement.children].filter((c) => c.matches(alvosReveal));
+    el.style.setProperty('--d', `${(irmaos.indexOf(el) % 5) * 90}ms`);
 });
 
 const observer = new IntersectionObserver((entries) => {
@@ -265,6 +300,7 @@ function renderFiltro() {
 function renderCidades() {
     const termo = normalizar(citySearch.value.trim());
     let total = 0;
+    let ordem = 0;
 
     citiesEl.innerHTML = ESTADOS
         .filter((e) => ufAtivo === 'todos' || e.uf === ufAtivo)
@@ -275,7 +311,7 @@ function renderCidades() {
             const qtd = `${filtradas.length} ${filtradas.length === 1 ? 'cidade' : 'cidades'}`;
 
             return `
-                <div class="uf">
+                <div class="uf" style="--i:${termo ? 0 : ordem++}">
                     <div class="uf-head"><b>${uf}</b><strong>${estado}</strong><small>${qtd}</small></div>
                     <ul>${filtradas.map((c) => `<li>${destacar(c, termo)}</li>`).join('')}</ul>
                 </div>
