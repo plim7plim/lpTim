@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logos/logoSite.png" type="image/png">
     <title>TIM Ultrafibra | Revendedor Autorizado</title>
     <meta name="description" content="Internet fibra TIM Ultrafibra de 1000 e 2000 Mega com serviços inclusos. Contrate com um revendedor autorizado TIM.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.SEUDOMINIO.com.br/">
+
+    <!-- Prévia ao compartilhar (WhatsApp, Facebook, Instagram) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="TIM Ultrafibra · Revendedor Autorizado">
+    <meta property="og:title" content="TIM Ultrafibra | Internet fibra de até 2 Giga">
+    <meta property="og:description" content="Internet fibra TIM Ultrafibra de 1000 e 2000 Mega com serviços inclusos. Contrate com um revendedor autorizado TIM.">
+    <meta property="og:url" content="https://www.SEUDOMINIO.com.br/">
+    <meta property="og:image" content="https://www.SEUDOMINIO.com.br/img/banners/banner-800mega-e-1giga.jpg">
+    <meta property="og:image:width" content="902">
+    <meta property="og:image:height" content="367">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -12,60 +27,31 @@
 </head>
 <body>
 
-    <!-- Barra superior -->
+    
     <div class="topbar">
         <div class="container topbar-inner">
-            <div class="topbar-contacts">
-                <a href="mailto:contato@seudominio.com.br">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
-                    contato@seudominio.com.br
-                </a>
-            </div>
-            <div class="topbar-social">
-                <a href="#" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-                </a>
-                <a href="#" aria-label="Facebook">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6c0-.9.6-1 1-1h3V1h-4c-3.3 0-4 2.4-4 4v3H7v4h3v11h4V12h3.5l.5-4z"/></svg>
-                </a>
-            </div>
         </div>
     </div>
 
     <!-- Cabeçalho -->
     <header class="header">
         <div class="container header-inner">
-            <a href="#" class="logo" aria-label="TIM - Revendedor autorizado">
-                <img src="img/logos/logo-tim.png" alt="TIM">
-            </a>
+            <span class="logo" aria-label="TIM - Revendedor autorizado">
+                <img src="img/logos/logo-tim-badge.png" alt="TIM">
+            </span>
 
             <div class="header-actions">
-                <a class="btn btn-accent" data-whats="Olá! Gostaria de saber mais sobre os planos de internet fibra TIM." target="_blank" rel="noopener">Contrate agora</a>
+                <a class="btn btn-accent" href="#planos">Contrate agora</a>
             </div>
         </div>
     </header>
 
     <!-- Banner -->
     <section class="banner" id="inicio">
-        <div class="container banner-inner">
-            <div class="banner-text">
-                <span class="banner-kicker">TIM Ultrafibra</span>
-                <h1>Internet fibra de até <strong>2000 Mega</strong></h1>
-                <p>Oferta especial para CPF com streaming, segurança e educação já inclusos no plano.</p>
-                <div class="banner-price">
-                    <small>A partir de</small>
-                    <div class="price">
-                        <span class="cur">R$</span><span class="int">129</span><span class="dec">,99<em>/mês</em></span>
-                    </div>
-                </div>
-                <a href="#planos" class="btn btn-accent btn-lg">Ver planos</a>
-            </div>
-            <div class="banner-visual" aria-hidden="true">
-                <img src="img/planos/card-1giga-paramount.png" alt="">
-                <img src="img/planos/card-1giga-hbo-max.png" alt="">
-                <img src="img/planos/card-2giga-streaming.png" alt="">
-            </div>
-        </div>
+        <h1 class="sr-only">TIM Ultrafibra: internet fibra de até 2000 Mega</h1>
+        <img class="banner-img" src="img/logos/fundolandingpagetim.jpg.jpeg" width="1600" height="456"
+             alt="TIM Ultrafibra: conheça os melhores planos de internet da TIM para você">
+        <a href="#planos" class="btn btn-accent banner-cta">Ver planos</a>
     </section>
 
     <!-- Planos -->
@@ -89,7 +75,7 @@
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline" data-modal="plano-5">Mais detalhes</button>
-                            <a class="btn btn-accent" data-whats="Olá! Quero assinar o plano TIM Ultrafibra 1 Giga + HBO Max (R$159,99/mês)." target="_blank" rel="noopener">Assinar</a>
+                            <button class="btn btn-accent" data-assinar="plano-5">Assinar</button>
                         </div>
                     </article>
 
@@ -102,7 +88,7 @@
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline" data-modal="plano-3">Mais detalhes</button>
-                            <a class="btn btn-accent" data-whats="Olá! Quero assinar o plano TIM Ultrafibra 1 Giga (R$129,99/mês)." target="_blank" rel="noopener">Assinar</a>
+                            <button class="btn btn-accent" data-assinar="plano-3">Assinar</button>
                         </div>
                     </article>
 
@@ -115,7 +101,7 @@
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline" data-modal="plano-4">Mais detalhes</button>
-                            <a class="btn btn-accent" data-whats="Olá! Quero assinar o plano TIM Ultrafibra 1 Giga + Paramount+ (R$149,99/mês)." target="_blank" rel="noopener">Assinar</a>
+                            <button class="btn btn-accent" data-assinar="plano-4">Assinar</button>
                         </div>
                     </article>
 
@@ -128,7 +114,7 @@
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline" data-modal="plano-6">Mais detalhes</button>
-                            <a class="btn btn-accent" data-whats="Olá! Quero assinar o plano TIM Ultrafibra 2 Giga + Paramount+, HBO Max e Globoplay (R$369,99/mês)." target="_blank" rel="noopener">Assinar</a>
+                            <button class="btn btn-accent" data-assinar="plano-6">Assinar</button>
                         </div>
                     </article>
 
@@ -142,7 +128,7 @@
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline" data-modal="plano-2">Mais detalhes</button>
-                            <a class="btn btn-accent" data-whats="Olá! Quero assinar o plano TIM Ultrafibra 800 Mega + YouTube Premium (R$129,99/mês)." target="_blank" rel="noopener">Assinar</a>
+                            <button class="btn btn-accent" data-assinar="plano-2">Assinar</button>
                         </div>
                     </article>
                 </div>
@@ -173,7 +159,7 @@
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-outline" data-modal="plano-1">Mais detalhes</button>
-                            <a class="btn btn-accent" data-whats="Olá! Quero assinar o plano empresarial TIM Ultrafibra 1 Giga - Oferta Foco (R$99,99/mês)." target="_blank" rel="noopener">Assinar</a>
+                            <button class="btn btn-accent" data-assinar="plano-1">Assinar</button>
                         </div>
                     </article>
                 </div>
@@ -182,7 +168,7 @@
     </section>
 
     <!-- Aplicativos -->
-    <section class="apps-section zigzag" id="aplicativos">
+    <section class="apps-section" id="aplicativos">
         <div class="container">
             <h2 class="typing-title">
                 <span class="typing" id="typing" data-words="ASSISTA NO|JOGUE NO|APRENDA NO|OUÇA NO|PROTEJA-SE NO"></span><span class="caret"></span>
@@ -278,6 +264,7 @@
                 <input type="text" id="cep" inputmode="numeric" placeholder="Digite seu CEP" maxlength="9" required>
                 <button type="submit" class="btn btn-accent">Consultar</button>
             </form>
+            <p class="cep-result" id="cepResult" role="status" aria-live="polite" hidden></p>
         </div>
     </section>
 
@@ -309,23 +296,27 @@
    
 
     <!-- Rodapé -->
-    <footer class="footer zigzag-top">
+    <footer class="footer">
         <div class="container footer-grid">
-            <div class="footer-col">
+            <div class="footer-col footer-col-brand">
                 <img src="img/logos/logo-tim-branco.png" alt="TIM" class="footer-logo">
-                <p>Revendedor autorizado TIM. Planos TIM Ultrafibra residenciais e empresariais.</p>
+                <p>Revendedor autorizado TIM. Internet fibra TIM Ultrafibra para a sua casa e a sua empresa, com instalação ágil e atendimento próximo de você.</p>
             </div>
             <div class="footer-col">
                 <h4>Contato</h4>
-                <a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a>
+                <a href="mailto:juridico@cscall.com.br">juridico@cscall.com.br</a>
             </div>
             <div class="footer-col">
-                <h4>Links</h4>
-                <a href="#inicio">Início</a>
-                <a href="#planos">Planos</a>
-                <a href="#aplicativos">Aplicativos</a>
-                <a href="#cobertura">Cobertura</a>
-                <a href="#cidades">Cidades atendidas</a>
+                <h4>Legal</h4>
+                <a href="politica-de-privacidade.html">Política de Privacidade</a>
+                <a href="politica-de-cookies.html">Política de Cookies</a>
+                <button type="button" class="footer-link-btn" data-cookie-prefs>Gerenciar cookies</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© <span id="year"></span> BLU Participações e Administração LTDA · CNPJ 66.403.848/0001-70. Todos os direitos reservados.</p>
+                <p class="footer-trademark">TIM e o logotipo TIM são marcas de titularidade da TIM S.A., utilizadas por revendedor autorizado.</p>
             </div>
         </div>
     </footer>
@@ -335,6 +326,154 @@
         <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
             <button class="modal-close" id="modalClose" aria-label="Fechar">&times;</button>
             <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Checkout / Contratação -->
+    <div class="modal checkout" id="checkout" aria-hidden="true">
+        <div class="checkout-box" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+            <button class="modal-close" id="checkoutClose" aria-label="Fechar">&times;</button>
+
+            <!-- Coluna do formulário -->
+            <div class="checkout-form-col">
+                <header class="checkout-header">
+                    <h3 id="checkoutTitle">Contratar plano</h3>
+                    <p>Preencha seus dados para finalizar a solicitação. Nosso time confirma a viabilidade no seu endereço.</p>
+                    <div class="checkout-steps" aria-hidden="true">
+                        <span class="step-dot active" data-dot="1"><b>1</b>Seus dados</span>
+                        <span class="step-line"></span>
+                        <span class="step-dot" data-dot="2"><b>2</b>Endereço</span>
+                    </div>
+                </header>
+
+                <form id="checkoutForm" novalidate>
+                    <!-- Etapa 1 -->
+                    <fieldset class="checkout-step active" data-step="1">
+                        <legend>Dados básicos</legend>
+                        <div class="field">
+                            <label for="ck-nome">Nome completo</label>
+                            <input type="text" id="ck-nome" name="nome" autocomplete="name" placeholder="Seu nome completo" required>
+                        </div>
+                        <div class="field">
+                            <label for="ck-cpf">CPF</label>
+                            <input type="text" id="ck-cpf" name="cpf" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" maxlength="14" required>
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="ck-nasc">Data de nascimento</label>
+                                <input type="text" id="ck-nasc" name="nascimento" inputmode="numeric" placeholder="dd/mm/aaaa" maxlength="10" required>
+                            </div>
+                            <div class="field">
+                                <label for="ck-cep">CEP</label>
+                                <input type="text" id="ck-cep" name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" required>
+                            </div>
+                        </div>
+                        <p class="field-hint" id="cepHint" hidden></p>
+                        <div class="checkout-actions">
+                            <button type="button" class="btn btn-accent btn-lg" data-next>Continuar</button>
+                        </div>
+                    </fieldset>
+
+                    <!-- Etapa 2 -->
+                    <fieldset class="checkout-step" data-step="2">
+                        <legend>Endereço detalhado</legend>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="ck-estado">Estado</label>
+                                <input type="text" id="ck-estado" name="estado" autocomplete="address-level1" placeholder="UF" maxlength="2" required>
+                            </div>
+                            <div class="field">
+                                <label for="ck-cidade">Cidade</label>
+                                <input type="text" id="ck-cidade" name="cidade" autocomplete="address-level2" placeholder="Sua cidade" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="ck-bairro">Bairro</label>
+                            <input type="text" id="ck-bairro" name="bairro" placeholder="Seu bairro" required>
+                        </div>
+                        <div class="field-row">
+                            <div class="field">
+                                <label for="ck-quadra">Quadra</label>
+                                <input type="text" id="ck-quadra" name="quadra" placeholder="Quadra">
+                            </div>
+                            <div class="field">
+                                <label for="ck-lote">Lote</label>
+                                <input type="text" id="ck-lote" name="lote" placeholder="Lote">
+                            </div>
+                        </div>
+                        <div class="field-row">
+                            <div class="field field-grow">
+                                <label for="ck-rua">Rua / Logradouro</label>
+                                <input type="text" id="ck-rua" name="rua" autocomplete="address-line1" placeholder="Nome da rua" required>
+                            </div>
+                            <div class="field">
+                                <label for="ck-numero">Número</label>
+                                <input type="text" id="ck-numero" name="numero" inputmode="numeric" placeholder="Nº">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="ck-complemento">Complemento <span>(opcional)</span></label>
+                            <input type="text" id="ck-complemento" name="complemento" placeholder="Apto, bloco, ponto de referência">
+                        </div>
+                        <p class="checkout-legal">Ao finalizar, você concorda com o uso dos seus dados para análise e contratação do plano, conforme a nossa <a class="cookie-link" href="politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</p>
+                        <div class="checkout-actions">
+                            <button type="button" class="btn btn-outline" data-prev>Voltar</button>
+                            <button type="submit" class="btn btn-accent btn-lg">Finalizar solicitação</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <!-- Coluna do plano -->
+            <aside class="checkout-plan" id="checkoutPlan"></aside>
+        </div>
+    </div>
+
+    <!-- Banner de consentimento de cookies -->
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="container cookie-banner-inner">
+            <div class="cookie-banner-text">
+                <strong>A sua privacidade é importante para nós</strong>
+                <p>Utilizamos cookies e tecnologias semelhantes para garantir o funcionamento do site, analisar o desempenho e, com o seu consentimento, personalizar ofertas — inclusive em plataformas da Meta. Ao clicar em “Aceitar todos”, você concorda com o uso de cookies. Saiba mais na <a class="cookie-link" href="politica-de-cookies.html" target="_blank" rel="noopener">Política de Cookies</a>.</p>
+            </div>
+            <div class="cookie-banner-actions">
+                <button type="button" class="btn btn-ghost" data-cookie-reject>Rejeitar</button>
+                <button type="button" class="btn btn-outline" data-cookie-prefs>Configurar</button>
+                <button type="button" class="btn btn-accent" data-cookie-accept>Aceitar todos</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preferências de cookies -->
+    <div class="modal cookie-modal" id="cookiePrefs" aria-hidden="true">
+        <div class="modal-box cookie-box" role="dialog" aria-modal="true" aria-labelledby="prefsTitle">
+            <button class="modal-close" data-cookie-close aria-label="Fechar">&times;</button>
+            <div class="cookie-head">
+                <h3 id="prefsTitle">Preferências de cookies</h3>
+                <p>Escolha quais categorias deseja permitir. Os cookies necessários são sempre ativos. Saiba mais na <a class="cookie-link" href="politica-de-cookies.html" target="_blank" rel="noopener">Política de Cookies</a>.</p>
+            </div>
+            <div class="cookie-cats">
+                <label class="cookie-cat">
+                    <div class="cookie-cat-text"><strong>Necessários</strong><span>Essenciais para o funcionamento do site e para a sua navegação. Sempre ativos.</span></div>
+                    <span class="cookie-switch"><input type="checkbox" checked disabled><i></i></span>
+                </label>
+                <label class="cookie-cat">
+                    <div class="cookie-cat-text"><strong>Desempenho e análise</strong><span>Ajudam a entender como o site é utilizado, de forma agregada, para melhorarmos a experiência.</span></div>
+                    <span class="cookie-switch"><input type="checkbox" data-cat="analytics"><i></i></span>
+                </label>
+                <label class="cookie-cat">
+                    <div class="cookie-cat-text"><strong>Funcionais</strong><span>Lembram as suas escolhas e preferências para personalizar a navegação.</span></div>
+                    <span class="cookie-switch"><input type="checkbox" data-cat="functional"><i></i></span>
+                </label>
+                <label class="cookie-cat">
+                    <div class="cookie-cat-text"><strong>Publicidade</strong><span>Exibem ofertas e mensuram campanhas, inclusive em plataformas da Meta, mediante o seu consentimento.</span></div>
+                    <span class="cookie-switch"><input type="checkbox" data-cat="ads"><i></i></span>
+                </label>
+            </div>
+            <div class="cookie-actions">
+                <button type="button" class="btn btn-outline" data-cookie-reject>Rejeitar não essenciais</button>
+                <button type="button" class="btn btn-accent" data-cookie-save>Salvar preferências</button>
+            </div>
         </div>
     </div>
 
