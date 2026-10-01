@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 
@@ -51,6 +51,11 @@
         <h1 class="sr-only">TIM Ultrafibra: internet fibra de até 2000 Mega</h1>
         <img class="banner-img" src="img/logos/fundolandingpagetim.jpg.jpeg" width="1600" height="456"
              alt="TIM Ultrafibra: conheça os melhores planos de internet da TIM para você">
+        <div class="banner-mobile" aria-hidden="true">
+            <span class="banner-tag">TIM ULTRAFIBRA</span>
+            <p class="banner-title">Conheça os melhores planos de internet da TIM para você!</p>
+            <p class="banner-price"><small>Planos a partir de</small><span>R$<b>99</b>,99<em>/mês</em></span></p>
+        </div>
         <a href="#planos" class="btn btn-accent banner-cta">Ver planos</a>
     </section>
 
@@ -65,7 +70,21 @@
             <!-- Casa -->
             <div class="tab-panel active" id="tab-casa">
                 <div class="cards">
-                    <article class="card featured">
+
+                    <article class="card card-focus">
+                        <span class="card-badge">Oferta em foco</span>
+                        <div class="card-head">
+                            <span>Internet Fibra + YouTube Premium</span>
+                        </div>
+                        <div class="card-body">
+                            <img src="img/planos/cpf-800mega-youtube-premium.png" alt="800 Mega com YouTube Premium por R$129,99/mês com pagamento via DACC" loading="lazy">
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-outline" data-modal="plano-2">Mais detalhes</button>
+                            <button class="btn btn-accent" data-assinar="plano-2">Assinar</button>
+                        </div>
+                    </article>
+                    <article class="card card-popular">
                         <span class="card-badge">Mais vendido</span>
                         <div class="card-head">
                             <span>Internet Fibra + HBO Max</span>
@@ -115,20 +134,6 @@
                         <div class="card-actions">
                             <button class="btn btn-outline" data-modal="plano-6">Mais detalhes</button>
                             <button class="btn btn-accent" data-assinar="plano-6">Assinar</button>
-                        </div>
-                    </article>
-
-                    <article class="card">
-                        <span class="card-badge">Oferta foco</span>
-                        <div class="card-head">
-                            <span>Internet Fibra + YouTube Premium</span>
-                        </div>
-                        <div class="card-body">
-                            <img src="img/planos/cpf-800mega-youtube-premium.png" alt="800 Mega com YouTube Premium por R$129,99/mês com pagamento via DACC" loading="lazy">
-                        </div>
-                        <div class="card-actions">
-                            <button class="btn btn-outline" data-modal="plano-2">Mais detalhes</button>
-                            <button class="btn btn-accent" data-assinar="plano-2">Assinar</button>
                         </div>
                     </article>
                 </div>
@@ -477,6 +482,6 @@
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=6"></script>
 </body>
 </html>

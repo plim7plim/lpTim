@@ -168,7 +168,10 @@ function moverIndicador() {
 }
 
 window.addEventListener('resize', moverIndicador);
+window.addEventListener('load', moverIndicador);
 document.fonts.ready.then(moverIndicador);
+// recalcula se as abas mudarem de tamanho (fonte carregando, rotação da tela...)
+if ('ResizeObserver' in window) new ResizeObserver(moverIndicador).observe(tabsEl);
 moverIndicador();
 
 document.querySelectorAll('.tab').forEach((tab) => {
